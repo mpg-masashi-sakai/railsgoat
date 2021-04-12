@@ -6,5 +6,10 @@ RUN mkdir /myapp
 WORKDIR /myapp
 ADD Gemfile /myapp/Gemfile
 ADD Gemfile.lock /myapp/Gemfile.lock
-RUN bundle install
+
+ENV BUNDLER_VERSION 1.17.3
+RUN gem update --system \
+    && gem install bundler -v $BUNDLER_VERSION \
+    && bundle update \
+    && bundle install
 ADD . /myapp

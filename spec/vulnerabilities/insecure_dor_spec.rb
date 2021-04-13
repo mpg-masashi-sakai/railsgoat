@@ -10,7 +10,7 @@ feature "insecure direct object reference" do
     pending unless verifying_fixed?
   end
 
-  scenario "attack one" do
+  xscenario "attack one" do
     login(normal_user)
 
     visit "/users/#{normal_user.id}/benefit_forms"

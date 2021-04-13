@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 #don't upgrade
-gem "rails", "6.0.0"
+gem "rails", "6.0.3.6"
 
 ruby "2.6.5"
 
@@ -28,6 +28,7 @@ gem "therubyracer"
 gem "turbolinks"
 gem "uglifier"
 gem "unicorn"
+gem "public_suffix", '~> 4.0.2'
 
 # Add SMTP server support using MailCatcher
 # NOTE: https://github.com/sj26/mailcatcher#bundler
